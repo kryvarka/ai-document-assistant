@@ -1,0 +1,32 @@
+/* ==========================================================================
+   DocQA Design System & Modular Stylesheets
+   ========================================================================== */
+
+@import "./styles/variables.css";
+@import "./styles/base.css";
+@import "./styles/sidebar.css";
+@import "./styles/chat.css";
+@import "./styles/auth.css";
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .messages-container,
+  .chat-input-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
