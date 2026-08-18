@@ -1,0 +1,89 @@
+{
+  "description": "Golden question set for measuring retrieval and grounding quality against sample_docs/.",
+  "cases": [
+    {
+      "id": "ttft-target",
+      "question": "What is the time-to-first-token target?",
+      "expected_document": "ai_architecture_strategy.pdf",
+      "expected_keywords": ["250"],
+      "expect_answer": true
+    },
+    {
+      "id": "p95-latency",
+      "question": "What P95 end-to-end latency does the architecture strategy commit to?",
+      "expected_document": "ai_architecture_strategy.pdf",
+      "expected_keywords": ["650"],
+      "expect_answer": true
+    },
+    {
+      "id": "cost-reduction",
+      "question": "How much were inference costs reduced and how was that achieved?",
+      "expected_document": "ai_architecture_strategy.pdf",
+      "expected_keywords": ["42", "routing"],
+      "expect_answer": true
+    },
+    {
+      "id": "availability-sla",
+      "question": "What service availability SLA is maintained?",
+      "expected_document": "ai_architecture_strategy.pdf",
+      "expected_keywords": ["99.95"],
+      "expect_answer": true
+    },
+    {
+      "id": "ingestion-throughput",
+      "question": "How much did document ingestion throughput improve in the Q2 release?",
+      "expected_document": "q2_product_release_notes.md",
+      "expected_keywords": ["420", "50"],
+      "expect_answer": true
+    },
+    {
+      "id": "dedup-savings",
+      "question": "How does deduplication reduce vector storage, and by how much?",
+      "expected_document": "q2_product_release_notes.md",
+      "expected_keywords": ["34", "SHA-256"],
+      "expect_answer": true
+    },
+    {
+      "id": "deprecation-date",
+      "question": "When are the legacy REST polling chat endpoints deprecated?",
+      "expected_document": "q2_product_release_notes.md",
+      "expected_keywords": ["September 30", "2026"],
+      "expect_answer": true
+    },
+    {
+      "id": "compliance",
+      "question": "Which compliance certifications does the platform hold?",
+      "expected_document": "q2_product_release_notes.md",
+      "expected_keywords": ["SOC 2", "27001"],
+      "expect_answer": true
+    },
+    {
+      "id": "achieved-ttft",
+      "question": "What TTFT was actually achieved against the Q2 target?",
+      "expected_document": "q2_product_release_notes.md",
+      "expected_keywords": ["185"],
+      "expect_answer": true
+    },
+    {
+      "id": "oos-weather",
+      "question": "What is the weather forecast for Kyiv tomorrow?",
+      "expected_document": null,
+      "expected_keywords": [],
+      "expect_answer": false
+    },
+    {
+      "id": "oos-recipe",
+      "question": "Give me a recipe for carbonara.",
+      "expected_document": null,
+      "expected_keywords": [],
+      "expect_answer": false
+    },
+    {
+      "id": "oos-unrelated-metric",
+      "question": "What was the company's Q3 headcount in the Warsaw office?",
+      "expected_document": null,
+      "expected_keywords": [],
+      "expect_answer": false
+    }
+  ]
+}
